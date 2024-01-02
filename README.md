@@ -1,28 +1,19 @@
 <p align="center">
 
-<img src="https://github.com/homebridge/branding/raw/latest/logos/homebridge-wordmark-logo-vertical.png" width="150">
+<img src="https://github.com/ultimatemonty/homebridge-myts/raw/main/static/img/myts-logo.jpg" width="150">
 
 </p>
 
 <span align="center">
 
-# Homebridge Platform Plugin Template
+# Homebridge MyTS
+# Much WIP, Very Construction
 
 </span>
 
-This is a template Homebridge dynamic platform plugin and can be used as a base to help you get started developing your own plugin.
+A Homebridge plugin for [MyTouchsmart](https://mytouchsmart.com/) devices
 
-This template should be used in conjunction with the [developer documentation](https://developers.homebridge.io/). A full list of all supported service types, and their characteristics is available on this site.
-
-### Clone As Template
-
-Click the link below to create a new GitHub Repository using this template, or click the *Use This Template* button above.
-
-<span align="center">
-
-### [Create New Repository From Template](https://github.com/homebridge/homebridge-plugin-template/generate)
-
-</span>
+Currently this project is targeting support for the [Outdoor Wi-Fi Smart Plug 39845](https://byjasco.com/media/mageworx/downloads/attachment/file/3/9/39845_ensp_app_manual_v3_2.pdf) since it's the only MyTouchsmart device I own.
 
 ### Setup Development Environment
 
@@ -54,7 +45,7 @@ When you are ready to publish the plugin you should set `private` to false, or r
 Open the [`src/settings.ts`](./src/settings.ts) file and change the default values:
 
 - `PLATFORM_NAME` - Set this to be the name of your platform. This is the name of the platform that users will use to register the plugin in the Homebridge `config.json`.
-- `PLUGIN_NAME` - Set this to be the same name you set in the [`package.json`](./package.json) file. 
+- `PLUGIN_NAME` - Set this to be the same name you set in the [`package.json`](./package.json) file.
 
 Open the [`config.schema.json`](./config.schema.json) file and change the following attribute:
 
@@ -167,25 +158,3 @@ Users can then install the  *beta* version by appending `@beta` to the install c
 ```shell
 $ sudo npm install -g homebridge-example-plugin@beta
 ```
-
-### Best Practices
-Consider creating your plugin with the [Homebridge Verified](https://github.com/homebridge/verified) criteria in mind. This will help you to create a plugin that is easy to use and works well with Homebridge.
-You can then submit your plugin to the Homebridge Verified list for review.
-The most up-to-date criteria can be found [here](https://github.com/homebridge/verified#requirements).
-For reference, the current criteria are:
-
-- The plugin must successfully install.
-- The plugin must implement the [Homebridge Plugin Settings GUI](https://github.com/oznu/homebridge-config-ui-x/wiki/Developers:-Plugin-Settings-GUI).
-- The plugin must not start unless it is configured.
-- The plugin must not execute post-install scripts that modify the users' system in any way.
-- The plugin must not contain any analytics or calls that enable you to track the user.
-- The plugin must not throw unhandled exceptions, the plugin must catch and log its own errors.
-- The plugin must be published to npm and the source code available on GitHub.
-  - A GitHub release - with patch notes - should be created for every new version of your plugin.
-- The plugin must run on all [supported LTS versions of Node.js](https://github.com/homebridge/homebridge/wiki/How-To-Update-Node.js), at the time of writing this is Node.js v16 and v18.
-- The plugin must not require the user to run Homebridge in a TTY or with non-standard startup parameters, even for initial configuration.
-- If the plugin needs to write files to disk (cache, keys, etc.), it must store them inside the Homebridge storage directory.
-
-### Useful Links
-Note these links are here for help but are not supported/verified by the Homebridge team
-- [Custom Characteristics](https://github.com/homebridge/homebridge-plugin-template/issues/20)
